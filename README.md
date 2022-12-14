@@ -1,7 +1,7 @@
 # PhysioNB
 ## Contents
--[Introduction](#introduction)  
--[Technologies](#technologies)  
+- [Introduction](#introduction)  
+- [Technologies](#technologies)  
 -[Setup](#setup)  
 -[Screenshots](#screenshots)  
 -[Contact](#contact)  
