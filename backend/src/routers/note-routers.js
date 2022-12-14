@@ -1,11 +1,10 @@
 const express = require("express");
 
 const Assessment = require("../models/assessment.js");
-const auth = require("../middlewares/auth");
 
 const router = new express.Router();
 
-router.post("/notes", auth, async (req, res) => {
+router.post("/notes", async (req, res) => {
     const assessment = new Assessment({
         ...req.body,
         owner: req.user._id,
@@ -17,7 +16,7 @@ router.post("/notes", auth, async (req, res) => {
         res.status(500).send(e);
     }
 });
-router.get("/notes", auth, async (req, res) => {
+router.get("/notes", async (req, res) => {
     try {
         await req.user.populate("assessments");
         res.send(req.user.assessments);
@@ -37,7 +36,7 @@ router.get("/notes", auth, async (req, res) => {
     }
 });
 */
-router.get("/notes/:id", auth, async (req, res) => {
+router.get("/notes/:id", async (req, res) => {
     try {
         const assessment = await Assessment.findById({ _id: req.params.id });
         if (!assessment) {
@@ -50,7 +49,7 @@ router.get("/notes/:id", auth, async (req, res) => {
 });
 
 // Get a patient with a specific patient's ID
-router.get("/notes/patient/:patientId", auth, async (req, res) => {
+router.get("/notes/patient/:patientId", async (req, res) => {
     try {
         const patientObjectId = `ObjectId('${req.params.patientId}')`
         console.log(`patientobjectId ${patientObjectId}`)
@@ -63,7 +62,7 @@ router.get("/notes/patient/:patientId", auth, async (req, res) => {
         res.status(500).send(e);
     }
 });
-router.delete("/notes/:id", auth, async (req, res) => {
+router.delete("/notes/:id", async (req, res) => {
     try {
         const assessment = await Assessment.findOneAndDelete({ _id: req.params.id });
 

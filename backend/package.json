@@ -1,11 +1,11 @@
 {
-  "name": "note-taking",
+  "name": "PhysioNB",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
     "dev": "env-cmd -f ./src/config/dev.env nodemon ./src/app.js"
   },
-  "author": "",
+  "author": "Denis Finn",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -16,5 +16,5 @@
   "devDependencies": {
     "env-cmd": "^10.1.0"
   },
-  "description": ""
+  "description": "Physio Notes Taking Application"
 }
