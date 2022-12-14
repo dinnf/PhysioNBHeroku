@@ -18,7 +18,7 @@ Authentication and encryption of user passwords is done using json web token and
   - jsonwebtoken: 8.5.1",  
   - mongoose: 6.3.1"  
 The frontend was created with:  
-  *React: 18.2.0  
+  * React: 18.2.0  
   
 ## Setup
 ### To run this project, install it locally using npm:  
