@@ -49,13 +49,7 @@ REACT_APP_PHYSIOAPP_BACKEND = 'http://127.0.0.1:8081'
       $ npm start </p>
   </body>
   </html>
-$ cd backend  
-$ npm install  
-$ npm run dev  
-  
-$ cd frontend  
-$ npm install  
-$ npm start  
+
   
 ## Contact  
   Denis Finn finn.denis@gmail.com  
