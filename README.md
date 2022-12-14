@@ -33,22 +33,18 @@ e.g.
 REACT_APP_PHYSIOAPP_BACKEND = 'http://127.0.0.1:8081'  
 
 
-        <html>
-        <body>
-        <p>$ cd backend  
+        
+        $ cd backend  
           $ npm install  
           $ npm run dev  
-        </p>
-        </body>
-        </html>
+        
+        
   
-           <html>
-          <body>
-          <p> $ cd frontend  
+          
+          $ cd frontend  
               $ npm install  
               $ npm start </p>
-          </body>
-          </html>
+          
 
   
 ## Contact  
