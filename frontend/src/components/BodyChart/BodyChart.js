@@ -5,7 +5,7 @@ import { useState } from "react";
 import React from "react"
 
 
-const MarkableImage = () => {
+const BodyChart = () => {
   let [markers, setMarkers] = useState([]);
 
   const CustomMarker = () => {
@@ -38,4 +38,4 @@ const MarkableImage = () => {
     </div>
   );
 }
-export default MarkableImage
+export default BodyChart
