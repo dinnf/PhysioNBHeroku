@@ -31,7 +31,19 @@ PHYSIOAPP_JWT_SECRET = "Somekindofsecretpasswordithink"
 ### Create a .env file in the frontend folder: frontend/src/.env  
 e.g.  
 REACT_APP_PHYSIOAPP_BACKEND = 'http://127.0.0.1:8081'  
+
+
+  <html>
+  <body>
+  <p>$ cd backend  
+    $ npm install  
+    $ npm run dev  
   
+    $ cd frontend  
+    $ npm install  
+    $ npm start </p>
+  </body>
+  </html>
 $ cd backend  
 $ npm install  
 $ npm run dev  
