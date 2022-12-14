@@ -22,33 +22,33 @@ The frontend was created with:
   
 ## Setup
 ### To run this project, install it locally using npm:  
-Create a .env file in the backend folder: backend/src/config/dev.env  
+#### Create a .env file in the backend folder: backend/src/config/dev.env  
 e.g.  
 PHYSIOAPP_MONGODB_URI = "mongodb://localhost:27017/physionoter"  
 PORT = 8081  
 PHYSIOAPP_JWT_SECRET = "Somekindofsecretpasswordithink"    
   
-### Create a .env file in the frontend folder: frontend/src/.env  
+#### Create a .env file in the frontend folder: frontend/src/.env  
 e.g.  
 REACT_APP_PHYSIOAPP_BACKEND = 'http://127.0.0.1:8081'  
 
 
-  <html>
-  <body>
-  <p>$ cd backend  
-    $ npm install  
-    $ npm run dev  
-  </p>
-  </body>
-  </html>
+        <html>
+        <body>
+        <p>$ cd backend  
+          $ npm install  
+          $ npm run dev  
+        </p>
+        </body>
+        </html>
   
-   <html>
-  <body>
-  <p> $ cd frontend  
-      $ npm install  
-      $ npm start </p>
-  </body>
-  </html>
+           <html>
+          <body>
+          <p> $ cd frontend  
+              $ npm install  
+              $ npm start </p>
+          </body>
+          </html>
 
   
 ## Contact  
