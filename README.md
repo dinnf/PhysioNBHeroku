@@ -1,10 +1,10 @@
 # PhysioNB
 ## Contents
-*[Introduction](#introduction)  
-*[Technologies](#technologies)  
-*[Setup](#setup)  
-*[Screenshots](#screenshots)  
-*[Contact](#contact)  
+-[Introduction](#introduction)  
+-[Technologies](#technologies)  
+-[Setup](#setup)  
+-[Screenshots](#screenshots)  
+-[Contact](#contact)  
 
 ## Introduction
 PhysioNB is a notes talking software for musculoskeletal physiotherapists. It allows physiotherapist to create an account, add their patients and add notes for each patient. It allows physiotherapists to move away from a paper-based notes keeping system.
@@ -12,11 +12,11 @@ Authentication and encryption of user passwords is done using json web token and
 
 ## Technologies
 ### This project was created with:  
-  *Node v16.15.1  
-  *bcryptjs: 2.4.3,  
-  *express: 4.18.0",  
-  *jsonwebtoken: 8.5.1",  
-  *mongoose: 6.3.1"  
+  -Node v16.15.1  
+  -bcryptjs: 2.4.3,  
+  -express: 4.18.0",  
+  -jsonwebtoken: 8.5.1",  
+  -mongoose: 6.3.1"  
 The frontend was created with:  
   *React: 18.2.0  
   
