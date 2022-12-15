@@ -9,3 +9,17 @@
 .NewPatientHead {
     margin-top: 20px;
 }
+.DelIcon {
+    color: rgb(255, 62, 62);
+    padding-left: 30px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.DelIcon:hover {
+    color: rgb(255, 217, 0);
+}

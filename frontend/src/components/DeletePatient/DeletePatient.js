@@ -44,7 +44,7 @@ const DeletePatient = () => {
             <h2 className="DelQuestion">
                 Are you sure you want to delete this patient?
             </h2>
-            <div className="DelPatientContent">{patientData}55</div>
+            <div className="DelPatientContent">{patientData}</div>
             <div className="DeleteBtns">
                 <button
                     onClick={handleNoDelete}

@@ -3,6 +3,8 @@ import '../CreateNote/CreateNote.css'
 import { useParams } from "react-router";
 import axios from "axios";
 import bodyChart from "../CreateNote/bodychart.png"
+import DeleteIcon from "@material-ui/icons/Delete";
+import {Link} from "react-router-dom";
 
 function GetNote() {
     const [PatientsNotes, setPatientsNotes] = useState([])
@@ -37,7 +39,7 @@ function GetNote() {
         {PatientsNotes.map((PatientsNotesList) => { 
             console.log(PatientsNotesList.hpc)
             return (
-                
+                <>
             <div className="BigContainer">
 
             <div className="LeftColumn">
@@ -190,7 +192,10 @@ function GetNote() {
         />
     </div>}
     </div>
-</div>) 
+    
+</div>
+<Link to={`/deletepatient`}><span className="DelIcon"><DeleteIcon /></span></Link>
+</>) 
 
         })}     
 </div>

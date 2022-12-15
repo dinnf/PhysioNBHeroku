@@ -1,0 +1,23 @@
+.patientDetails {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.patientPage {
+    background-color: rgb(75, 139, 59);
+    min-height: 40vh;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    height: 70vh;
+}
+.patientTable1 {
+        border-collapse: collapse;
+        width: 30vw;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        
+}
+table td {
+    border: 1px solid;
+    padding: 10px;
+}

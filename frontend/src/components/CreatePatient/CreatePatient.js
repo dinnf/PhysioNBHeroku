@@ -37,7 +37,7 @@ function CreatePatient() {
         <form>
         <h1 className="NewPatientHead">Create New Patient</h1>
             <div className="CreateNewPatient">
-                <span className="FormLabel">Patient ID Number</span>
+                <span className="FormLabel">NHI</span>
                 <input
                     type="text"
                     className="FormInput"
