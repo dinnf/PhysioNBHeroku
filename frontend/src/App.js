@@ -12,7 +12,6 @@ import DeletePatientPage from "./pages/DeletePatientPage";
 import CreateNotePage from "./pages/CreateNotePage"
 import DeleteAccountPage from "./pages/DeleteAccountPage"
 import GetNotePage from "./pages/GetNotePage"
-import MarkablePage from "./pages/MarkablePage"
 
 function App() {
    // const token = localStorage.getItem("token");
@@ -31,7 +30,6 @@ function App() {
                     <Route path="/createassessment/:id" element={<CreateNotePage />} />
                     <Route path="/deleteaccount" element={<DeleteAccountPage />} />
                     <Route path="/getnote/:id" element={<GetNotePage />} />
-                    <Route path="/markable" element={<MarkablePage />} />
                 </Routes>
             </BrowserRouter>
         </div>
