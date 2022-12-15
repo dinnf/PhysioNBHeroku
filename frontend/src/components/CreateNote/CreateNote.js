@@ -30,7 +30,8 @@ const CreateNote = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const token = localStorage.getItem("token");
-
+    const today = new Date(),
+    date = today.getDate() + '-' + (today.getMonth() + 1)+ '-' +   today.getFullYear()
     const getPatientName = () => {
         axios({
             method: "GET",
@@ -40,7 +41,7 @@ const CreateNote = () => {
                 Authorization: `Bearer ${token}`,
             }
         }).then((res) => {
-            setPatientName(`NHI: ${res.data.patientId} Name: ${res.data.firstname} ${res.data.lastname}`)
+            setPatientName(`NHI: ${res.data.patientId}    Name: ${res.data.firstname} ${res.data.lastname}`)
         });
     };
 
@@ -67,7 +68,7 @@ const CreateNote = () => {
     return (
         //Should make this all one component taking props
             <div className="FormContent">
-                <h1>{patientName}</h1>
+                <h1 className="assessmentHead">{patientName} <span className="dateSpan">{date}</span></h1>
                         <form onSubmit={handleSubmit}>
                         <div className="BigContainer">
                             <div className="LeftColumn">
@@ -247,7 +248,7 @@ const CreateNote = () => {
                         />
                     </div>
                     <div className="NoteForm">
-                        <h3 className="TextHead">Special Questions</h3>
+                        <h3 className="TextHead">Notes</h3>
                         <textarea
                             className="NoteText"
                             value={specialquestions}

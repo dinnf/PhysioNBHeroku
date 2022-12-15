@@ -69,65 +69,56 @@ const Home = () => {
                 {patientList && (
                     <div>
                         {" "}
+                        <table className="patientsTable">
+                            <thead>
+                        <tr>
+                                    <th>NHI</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Delete Patient</th>
+                                    <th>Create Note</th>
+                                    <th>View Notes</th>
+                                </tr>
+                                </thead>
+                                <tbody>
                         {patientList.map((patient) => (
-                            <div className="Patient">
-                                <div className="PatientId">
-                                    {`NHI: ${patient.patientId} Name: ${patient.firstname} ${patient.lastname}`}
-                                </div>
-                                <Link to={`/deletepatient/${patient._id}`}>
+                            <tr className="Patient">
+                               <td>
+                                {patient.patientId}
+                                </td>
+                                <td>
+                                {patient.firstname} 
+                                </td>
+                                <td>
+                                {patient.lastname}
+                                </td>
+                                <td><Link to={`/deletepatient/${patient._id}`}>
                                     <span className="DelIcon">
                                         <DeleteIcon />
                                     </span>
+                                
                                 </Link>
-                                <Link to={`/createassessment/${patient._id}`}>
+                                </td>
+                                <td>
+                                    <Link to={`/createassessment/${patient._id}`}>
                                         <div>
-                                        <button className="CreateAssessmentButton">Create Note</button>
                                         <button className="AddBtn">+</button>
                                         </div>
                                 </Link>
-                                <Link to={`/getnote/${patient._id}`}>
-                                    <div>
-                                        <button className="GetNoteButton">View Notes</button>
-                                    </div>
-                                </Link>
+                                </td>
+                                <td><Link to={`/getnote/${patient._id}/${patient.firstname}/${patient.lastname}`}>
                                 
-                            </div>
-                        ))}{" "}
-                    </div>
-                )}
-            </div>
-            </div>
-            <div className="NotesColumn">
-            <h1 className="HomeNotes">Notes</h1>
-
-            <Link to="/create">
-                <button className="AddBtn">+</button>
-            </Link>
-
-            {!noteList ||
-                (noteList.length === 0 && (
-                    <h2 className="NoNotesFound">No Notes Found</h2>
-                ))}
-            <div className="NoteList">
-                {noteList && (
-                    <div>
-                        {" "}
-                        {noteList.map((note) => (
-                            <div className="Note">
-                                <div className="NoteContent">
-                                    {note.content}
-                                </div>
-                                <Link to={`/deletetask/${note._id}`}>
-                                    <span className="DelIcon">
-                                        <DeleteIcon />
-                                    </span>
+                                        <button className="GetNoteButton">View Notes</button>    
                                 </Link>
-                            </div>
-                        ))}{" "}
+                                </td>
+                                </tr>
+                    
+                        ))}</tbody></table>{" "}
                     </div>
                 )}
             </div>
             </div>
+           
             
         </div>
     );

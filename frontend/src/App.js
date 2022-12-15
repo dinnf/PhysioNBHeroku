@@ -29,7 +29,7 @@ function App() {
                     <Route path="/deletepatient/:id" element={<DeletePatientPage />} />
                     <Route path="/createassessment/:id" element={<CreateNotePage />} />
                     <Route path="/deleteaccount" element={<DeleteAccountPage />} />
-                    <Route path="/getnote/:id" element={<GetNotePage />} />
+                    <Route path="/getnote/:id/:firstname/:lastname" element={<GetNotePage />} />
                 </Routes>
             </BrowserRouter>
         </div>

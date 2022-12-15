@@ -6,23 +6,8 @@ import bodyChart from "../CreateNote/bodychart.png"
 
 function GetNote() {
     const [PatientsNotes, setPatientsNotes] = useState([])
-    const { id } = useParams();
+    const { id, firstname, lastname } = useParams();
     const token = localStorage.getItem("token");
-    /*const getPatientNotes = () => {
-        axios({
-            method: "GET",
-            url: `${process.env.REACT_APP_PHYSIOAPP_BACKEND}/notes`,
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-            }
-        }).then((res) => {
-            setPatientsNotesList(res.data)
-            console.log(PatientsNotesList)
-        });
-    };
-    getPatientNotes()
-    */
     const getPatientNotes = () => {
         const token = localStorage.getItem("token");
 
@@ -52,8 +37,12 @@ function GetNote() {
         {PatientsNotes.map((PatientsNotesList) => { 
             console.log(PatientsNotesList.hpc)
             return (
+                
             <div className="BigContainer">
+
             <div className="LeftColumn">
+                <hr />
+                <h1>{firstname} {lastname} {PatientsNotesList.createdAt.slice(8,10)}-{PatientsNotesList.createdAt.slice(5,7)}-{PatientsNotesList.createdAt.slice(0,4)}</h1>
             {PatientsNotesList.hpc && <div className="NoteForm">
         
         <h3 className="TextHead">History of Presenting Complaint</h3>
@@ -194,20 +183,20 @@ function GetNote() {
         />
     </div>}
     {PatientsNotesList.specialquestions && <div className="NoteForm">
-        <h3 className="TextHead">Special Questions</h3>
+        <h3 className="TextHead">Notes</h3>
         <textarea
             className="NoteText"
             value={PatientsNotesList.specialquestions}
         />
     </div>}
-    
     </div>
-</div>)
+</div>) 
 
-        })}
-            
+        })}     
 </div>
+
 )
+
 }
 
 export default GetNote

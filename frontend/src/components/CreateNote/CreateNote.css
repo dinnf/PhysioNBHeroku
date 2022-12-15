@@ -113,3 +113,10 @@ textarea {
     padding: 10px;
     height:5vh;
   }
+  .dateSpan {
+    float: right;
+  }
+  .assessmentHead {
+    width:80%;
+    padding-left: 100px;
+  }

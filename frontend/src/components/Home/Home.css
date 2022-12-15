@@ -55,31 +55,19 @@
 
 .AddBtn {
     background-color: rgb(255, 217, 0);
-    /* background-color: rgb(96, 197, 255); */
-    height: 50px;
-    width: 50px;
-    display: flex;
+    height: 25px;
+    width: 55px;
     padding-bottom: 5px;
-    align-items: center;
-    justify-content: center;
     border: none;
     outline: none;
-    border-radius: 50px;
-    font-size: 50px;
+    border-radius: 20px;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.4s;
-    position: fixed;
-    right: 35px;
-    bottom: 130px;
 }
 
 .AddBtn:hover {
-    background: none;
-    color: rgb(255, 217, 0);
-    /* color: rgb(96, 197, 255); */
     border: 3px solid rgb(255, 217, 0);
-    /* border: 2px solid rgb(96, 197, 255); */
-    box-shadow: 1px 1px 20px rgb(32, 32, 32);
 }
 .AddNewPatientBtn, .CreateAssessmentButton, .GetNoteButton {
     background-color: rgb(255, 217, 0);
@@ -101,4 +89,29 @@
 }
 .HomePatients {
     padding-bottom: 20px;
+    text-align: center;
+}
+.Patient {
+    font-size: 20px;
+}
+.patientsTable {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+ .patientsTable td, .patientsTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .patientsTable tr:nth-child(even){background-color:rgb(47, 87, 37);}
+  
+  .patientsTable tr:hover {background-color: rgb(62, 103, 52);}
+  
+  .patientsTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;}
+td {
+    width: 20%;
 }
