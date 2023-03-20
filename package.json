@@ -7,9 +7,9 @@
     "npm": "8.11.0"
   },
   "scripts": {
-    "start": "npm install && node server.js",
+    "start": "npm install --legacy-peer-deps && node server.js",
     "dev": "env-cmd -f ./config/dev.env nodemon ./server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --legacy-peer-deps && npm run build"
   },
   "author": "Denis Finn",
   "license": "ISC",
