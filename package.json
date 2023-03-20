@@ -1,13 +1,13 @@
 {
   "name": "PhysioNB",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "server.js",
   "engines": {
     "node": "16.15.1"
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon ./app.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon ./server.js",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Denis Finn",
