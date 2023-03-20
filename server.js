@@ -1,6 +1,8 @@
 const express = require("express");
+const path = require("path")
 
 require("./db/mongoose.js");
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 const noteRouter = require("./routers/note-routers.js");
 const userRouter = require("./routers/user-routers.js");
@@ -26,7 +28,9 @@ app.use(userRouter);
 app.use(patientRouter);
 
 const port = process.env.PORT || 8000;
-
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 app.listen(port, () => {
     console.log(`Backend running on port ${port}`);
 });
