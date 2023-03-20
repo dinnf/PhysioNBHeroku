@@ -2,13 +2,14 @@ const express = require("express");
 const path = require("path")
 
 require("./db/mongoose.js");
-app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 const noteRouter = require("./routers/note-routers.js");
 const userRouter = require("./routers/user-routers.js");
 const patientRouter = require("./routers/patient-routers")
 
 const app = express();
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use((req, res, next) => {
     res.set("Access-Control-Allow-Origin", "*");
